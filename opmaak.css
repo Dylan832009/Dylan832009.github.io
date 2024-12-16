@@ -1,73 +1,61 @@
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
-}
-
-header {
-  background-color: #333;
-  padding: 20px 0;
-}
-
-nav ul {
+ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  background-color: #333;
   display: flex;
   justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Schaduw voor een diepte-effect */
+  border-radius: 10px; /* Ronde hoeken voor een modern uiterlijk */
+  transition: background-color 0.3s ease; /* Soepele overgang bij hover over de gehele balk */
 }
 
-nav ul li {
-  margin: 0 15px;
+/* Styling voor de <li> elementen */
+li {
+  margin: 0 15px; /* Ruimte tussen de items */
+  position: relative;
 }
 
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  padding: 10px 20px;
+/* Styling voor de links binnen de <li> */
+li a {
   display: block;
-  border-radius: 4px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-nav ul li a:hover {
-  background-color: #111;
-  transform: scale(1.1);
-}
-
-/* Responsieve stijlen */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul li {
-    margin: 10px 0;
-  }
-
-  nav ul li a {
-    font-size: 16px;
-  }
-}
-
-/* Secties voor de inhoud */
-section {
-  padding: 50px 20px;
+  color: white;
   text-align: center;
+  padding: 14px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern lettertype */
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 5px; /* Ronde hoeken voor een nette uitstraling */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Soepele overgang voor hover-effecten */
 }
 
-section h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
+/* Hover-effect voor de links */
+li a:hover {
+  background-color: #ff6600; /* Aantrekkelijke hover-kleur */
+  transform: translateY(-3px); /* Verhoogt de link bij hover voor een levendig effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Schaduw effect bij hover voor meer diepte */
 }
 
-section p {
-  font-size: 18px;
-  line-height: 1.6;
-  max-width: 800px;
-  margin: 0 auto;
+/* Styling voor het actieve link (indien gewenst) */
+li a.active {
+  background-color: #ff6600; /* Actieve link heeft dezelfde kleur als hover */
+  color: white;
+  font-weight: bold; /* Maakt de actieve link vetgedrukt */
+}
+
+/* Responsieve versie voor kleinere schermen */
+@media (max-width: 768px) {
+  ul {
+    flex-direction: column; /* Zet de lijst verticaal bij kleinere schermen */
+    align-items: flex-start; /* Zorgt ervoor dat de items netjes beginnen vanaf de linkerkant */
+  }
+  
+  li {
+    margin: 10px 0; /* Minder ruimte tussen items op kleinere schermen */
+  }
+
+  li a {
+    padding: 12px 20px; /* Iets kleinere padding voor mobiele weergave */
+  }
 }
