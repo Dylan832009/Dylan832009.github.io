@@ -2,60 +2,74 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  background-color: #333;
+  background-color: #1a1a1a;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Schaduw voor een diepte-effect */
-  border-radius: 10px; /* Ronde hoeken voor een modern uiterlijk */
-  transition: background-color 0.3s ease; /* Soepele overgang bij hover over de gehele balk */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 /* Styling voor de <li> elementen */
 li {
-  margin: 0 15px; /* Ruimte tussen de items */
+  margin: 0 20px;
   position: relative;
 }
 
 /* Styling voor de links binnen de <li> */
 li a {
   display: block;
-  color: white;
+  color: #f1f1f1;
   text-align: center;
-  padding: 14px 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern lettertype */
-  font-size: 16px;
+  padding: 16px 24px;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 18px;
   text-decoration: none;
-  border-radius: 5px; /* Ronde hoeken voor een nette uitstraling */
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Soepele overgang voor hover-effecten */
+  border-radius: 6px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: background-color 0.4s ease, transform 0.4s ease, color 0.3s ease;
 }
 
 /* Hover-effect voor de links */
 li a:hover {
-  background-color: #ff6600; /* Aantrekkelijke hover-kleur */
-  transform: translateY(-3px); /* Verhoogt de link bij hover voor een levendig effect */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Schaduw effect bij hover voor meer diepte */
+  background-color: #ff7f00;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  color: white;
 }
 
-/* Styling voor het actieve link (indien gewenst) */
+/* Actieve link styling */
 li a.active {
-  background-color: #ff6600; /* Actieve link heeft dezelfde kleur als hover */
+  background-color: #ff6600;
   color: white;
-  font-weight: bold; /* Maakt de actieve link vetgedrukt */
+  font-weight: 600;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsieve versie voor kleinere schermen */
 @media (max-width: 768px) {
   ul {
-    flex-direction: column; /* Zet de lijst verticaal bij kleinere schermen */
-    align-items: flex-start; /* Zorgt ervoor dat de items netjes beginnen vanaf de linkerkant */
+    flex-direction: column;
+    width: 100%;
+    border-radius: 0;
   }
-  
+
   li {
-    margin: 10px 0; /* Minder ruimte tussen items op kleinere schermen */
+    margin: 10px 0;
   }
 
   li a {
-    padding: 12px 20px; /* Iets kleinere padding voor mobiele weergave */
+    padding: 14px 20px;
+    font-size: 16px;
+    text-align: left;
+    width: 100%;
   }
+}
+
+/* Extra effect bij hover voor een elegante animatie */
+ul:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
